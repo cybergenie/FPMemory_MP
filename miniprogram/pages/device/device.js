@@ -73,7 +73,7 @@ Page({
               state: true,
               deviceId: options.connectedDeviceId,
               serviceId: that.data.services[0].uuid,
-              characteristicId: that.data.characteristics[0].uuid,
+              characteristicId: that.data.characteristics[4].uuid,
               success: function (res) {
                 console.log('启用notify成功')
               }
