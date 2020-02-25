@@ -88,9 +88,14 @@ Page({
         connected: res.connected
       })
     })
-    wx.onBLECharacteristicValueChange(function (res) {
-      var receiveText = app.buf2string(res.value)
+    var receiveText = new Array()
+    wx.onBLECharacteristicValueChange(function (res) {      
+      receiveText.push(app.buf2hex(res.value))
       console.log('接收到数据：' + receiveText)
+      if(receiveText.length>=10)
+      {
+        receiveText.shift()
+      }
       that.setData({
         receiveText: receiveText
       })

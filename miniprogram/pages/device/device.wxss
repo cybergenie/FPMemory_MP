@@ -12,6 +12,10 @@ page {
   border: 1px solid lightgray;
   border-radius: 6px;
 }
+.receive {  
+  font-family: Microsoft YaHei;
+  text-align: left;   
+}
 .button {
   position: fixed;
   width: 690rpx;
